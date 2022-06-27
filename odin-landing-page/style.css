@@ -42,9 +42,10 @@ a {
 
 .hero {
     background-color: #1F2937;
-    padding: 25px 15%;
+    padding: 25px 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap: 20px;
 }
 
 .main {
@@ -55,18 +56,61 @@ a {
     width: 40%;
 }
 
-.title {
+.main .title {
     color: #F9FAF8;
     font-weight: 800;
     font-size: 48px;
+    margin: 0;
 }
 
 button {
-    border-radius: 25px;
+    border-radius: 10px;
     border-style: none;
     background-color: #3882F6;
-    color: F9FAF8;
-    padding: 20px;
-    width: 200px;
-    height: 150px;
+    color: #F9FAF8;
+    padding: 5px;
+    width: 100px;
+    height: 35px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.information {
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.information .title {
+    color: #1F2937;
+    font-weight: 800;
+    font-size: 36px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gallery .element {
+    width: 150px;
+    height: auto;
+    text-align: center;
+}
+
+.main_img {
+    max-width: 40%;
+    width: 100%;
+    height: auto;
+}
+
+.gallery_img {
+    width: 150px;
+    height: auto;
+    border: #3882F6 solid;
+    border-radius: 10px;
 }
