@@ -64,7 +64,7 @@ a {
     margin: 0;
 }
 
-button {
+.hero .button {
     border-radius: 10px;
     border-style: none;
     background-color: #3882F6;
@@ -135,4 +135,32 @@ button {
     color: #1F2937;
     text-align: right;
     margin-top: 0;
+}
+
+.call-to-action {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 110px;
+    margin: 80px 15%;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.call-to-action .title {
+    font-size: 20px;
+}
+
+.call-to-action .button {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #F9FAF8;
+    background-color: #3882F6;
+    color: #F9FAF8;
+    padding: 5px;
+    width: 100px;
+    height: 35px;
+    font-size: 14px;
+    font-weight: bold;
 }
