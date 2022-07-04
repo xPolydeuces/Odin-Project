@@ -5,12 +5,14 @@ let computerScore = 0;
 // Functions
 
 function capitalize(string){
+    // function takes a string and returns it capitalized
     const lowerString = string.toLowerCase().slice(1);
     const firstChar = string.charAt(0).toUpperCase();
     return firstChar + lowerString;
 }
 
 function computerPlay(){
+    // function returns "Rock", "Paper" or "Scissors" value, chosen randomly
     const choice = Math.floor(Math.random() * 3);
     switch (choice) {
         case 0:
@@ -23,6 +25,7 @@ function computerPlay(){
 }
 
 function playerPlay(){
+    // function prompts player for valid value, if the value is incorrect, it prompts user again
     let playerSelection = prompt("Rock, Paper, Scissors?");
     playerSelection = capitalize(playerSelection);
     while (!["Rock", "Paper", "Scissors"].includes(playerSelection)){
@@ -34,6 +37,8 @@ function playerPlay(){
 }
 
 function playRound(playerSelection, computerSelection){
+    // function takes playerSelection and computerSelection, both being string values,
+    // and checks who wins Rock Paper Scissors game
     if (playerSelection == computerSelection){
         return `Both players chose ${playerSelection}. It's a tie!`;
     } else if (playerSelection == "Rock"){
@@ -64,6 +69,7 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
+    // main function of the game, plays 5 rounds and returns the winner
     for (let i = 0; i < 5; i++){
         const playerSelection = playerPlay();
         const computerSelection = computerPlay();
