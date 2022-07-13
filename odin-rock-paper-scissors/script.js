@@ -1,6 +1,8 @@
 // Global variables
 let playerScore = 0;
 let computerScore = 0;
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => button.addEventListener('click', playerPlay))
 
 // Functions
 
@@ -24,16 +26,10 @@ function computerPlay(){
     }
 }
 
-function playerPlay(){
+function playerPlay(e){
     // function prompts player for valid value, if the value is incorrect, it prompts user again
-    let playerSelection = prompt("Rock, Paper, Scissors?");
-    playerSelection = capitalize(playerSelection);
-    while (!["Rock", "Paper", "Scissors"].includes(playerSelection)){
-        alert("Whoops, you chose a wrong value. Try again!");
-        playerSelection = prompt("Rock, Paper, Scissors?");
-        playerSelection = capitalize(playerSelection);
-    }
-    return playerSelection;
+    let playerSelection = this.innerHTML;
+    game(playerSelection, computerPlay());
 }
 
 function playRound(playerSelection, computerSelection){
@@ -68,18 +64,7 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-function game(){
+function game(playerSelection, computerSelection){
     // main function of the game, plays 5 rounds and returns the winner
-    for (let i = 0; i < 5; i++){
-        const playerSelection = playerPlay();
-        const computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-    }
-    if (playerScore > computerScore){
-        return "Player wins!";
-    } else {
-        return "Computer wins!";
-    }
+    console.log(playRound(playerSelection, computerSelection));
 }
-
-console.log(game());
