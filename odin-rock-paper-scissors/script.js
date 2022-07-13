@@ -1,17 +1,14 @@
 // Global variables
 let playerScore = 0;
 let computerScore = 0;
+let gameEnd = false;
 const buttons = document.querySelectorAll('button');
+const roundResult = document.querySelector('.roundResult');
+const displayPlayerScore = document.querySelector('.displayPlayerScore');
+const displayComputerScore = document.querySelector('.displayComputerScore');
 buttons.forEach(button => button.addEventListener('click', playerPlay))
 
 // Functions
-
-function capitalize(string){
-    // function takes a string and returns it capitalized
-    const lowerString = string.toLowerCase().slice(1);
-    const firstChar = string.charAt(0).toUpperCase();
-    return firstChar + lowerString;
-}
 
 function computerPlay(){
     // function returns "Rock", "Paper" or "Scissors" value, chosen randomly
@@ -28,6 +25,7 @@ function computerPlay(){
 
 function playerPlay(e){
     // function prompts player for valid value, if the value is incorrect, it prompts user again
+    if (gameEnd) return;
     let playerSelection = this.innerHTML;
     game(playerSelection, computerPlay());
 }
@@ -66,5 +64,9 @@ function playRound(playerSelection, computerSelection){
 
 function game(playerSelection, computerSelection){
     // main function of the game, plays 5 rounds and returns the winner
-    console.log(playRound(playerSelection, computerSelection));
+    roundResult.innerHTML = playRound(playerSelection, computerSelection);
+    if (playerScore == 5){roundResult.innerHTML = "Player wins!"; gameEnd=true} 
+    if (computerScore == 5){roundResult.innerHTML = "Computer wins!"; gameEnd=true}
+    displayPlayerScore.innerHTML = `Player: ${playerScore}`;
+    displayComputerScore.innerHTML = `Computer: ${computerScore}`;
 }
