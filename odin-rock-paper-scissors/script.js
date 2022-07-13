@@ -22,15 +22,15 @@ function computerPlay(){
     const choice = Math.floor(Math.random() * 3);
     switch (choice) {
         case 0:
-            computerChoiceImg.firstChild.src = 'https://static.wikia.nocookie.net/jet/images/b/b3/Guu2.jpg/revision/latest?cb=20061118005419';
+            computerChoiceImg.firstChild.src = 'images/ComputerRock.webp';
             computerChoiceImg.firstChild.alt = 'rock';
             return "Rock";
         case 1:
-            computerChoiceImg.firstChild.src = 'https://static.wikia.nocookie.net/jet/images/6/6d/Paa2.jpg/revision/latest?cb=20061118005432';
+            computerChoiceImg.firstChild.src = 'images/ComputerPaper.webp';
             computerChoiceImg.firstChild.alt = 'paper';
             return "Paper";
         case 2:
-            computerChoiceImg.firstChild.src = 'https://static.wikia.nocookie.net/jet/images/0/0e/Choki2.jpg/revision/latest?cb=20061118005407';
+            computerChoiceImg.firstChild.src = 'images/ComputerScissors.webp';
             computerChoiceImg.firstChild.alt = 'scissors';
             return "Scissors";
     }
