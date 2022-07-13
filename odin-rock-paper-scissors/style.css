@@ -1,0 +1,45 @@
+@import url('http://fonts.cdnfonts.com/css/edo-sz');
+body {
+    background-color: #46c28c;
+    background-image: url(https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg);
+    background-size: cover;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    margin-top: 1.5em;
+    font-size: 3em;
+    font-family: 'Edo SZ', sans-serif;
+}
+
+.buttons {
+    margin: 3em auto;
+    display: flex;
+    gap: 8em;
+}
+
+button {
+    padding: 0;
+    background: none;
+}
+
+.vs {
+    font-size: 4em;
+    font-family: 'Edo SZ', sans-serif;
+    margin-bottom: 1em;
+}
+
+.roundResult {
+    margin: 1.5em auto;
+    font-size: 1.5em;
+    text-shadow: -1px 1px 0 #FFF, 1px 1px 0 #FFF, 1px -1px 0 #FFF, -1px -1px 0 #FFF;
+}
+
+.currentScore {
+    display: flex;
+    font-size: 2em;
+    gap: 10em;
+}
