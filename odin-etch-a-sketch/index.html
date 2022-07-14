@@ -9,12 +9,21 @@
         <title>Etch-a-Sketch</title>
     </head>
     <body>
-        <div id="grid-container">
-            
-        </div>
-        <div class="slidecontainer">
-            <input type="range" min="8" max="64" value="16" class="slider" id="myRange">
-            <p>Value: <span class="value"></span></p>
+        <div class="body">
+            <div class="header">Etch-a-Sketch</div>
+            <div class="main">
+                <div class="sidebar">
+                    <button class="draw"><img src="icons/pencil.png"></button>
+                    <button class="eraser"><img src="icons/eraser.png"></button>
+                    <button class="clear"><img src="icons/sponge.png"></button>
+                </div>
+                <div class="grid-container">
+                </div>
+            </div>
+            <div class="slidercontainer">
+                <p>Grid size: <span class="value"></span></p>
+                <input type="range" min="8" max="64" value="16" class="slider">
+            </div>
         </div>
     </body>
 </html>
